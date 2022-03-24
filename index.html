@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/mainStyle.css">
+    <link rel="stylesheet" href="/css/formStyle.css">
+    <link rel="stylesheet" href="/css/editStyle.css">
+    <link rel="stylesheet" href="/css/col1Style.css">
+    <link rel="stylesheet" href="/css/col2Style.css">
+    <link rel="stylesheet" href="/css/col3Style.css">
+    <link href="fontawesome-free/css/all.css" rel="stylesheet">
+    <title>To-Do List</title>
+</head>
+<body>
+<div id="mainWrapper">
+
+    <div id="header">
+        <p>To-Do List</p>
+    </div>
+
+    <ul id="column1">
+        <p class='miniHeader' id="filesHeader">FILES<i class="fas fa-plus fa-xs" id="addFile"></i></p>
+        <div id="seperator"></div>
+        <ul class="filesList">
+        </ul>
+    </ul>
+
+    <div id='column2'>
+    <ul id="itemList">
+        
+    </ul>
+    
+        <div id="column2Utility">
+            <button id="plusWrapper" class="addButton">
+                <i class="fas fa-plus" id="addButton"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="column3">
+
+        <div id="column3Wrapper">
+
+            <p id="itemHeader" class="miniHeader">ITEM INFORMATION</p>
+
+            <div class="itemInfo">
+                <div class="itemInfoRow" id="item">
+                    <p class="itemMiniHeader">Item Name</p>
+                    <p class="itemMiniDesc" id="itemNameMini"></p>
+                </div>
+                <div class="itemInfoRow" id="itemDesc">
+                    <p class="itemMiniHeader">Item Description</p>
+                    <p class="itemMiniDesc" id="itemDescMini"></p>
+                </div>
+                <div class="itemInfoRow" id="itemDue">
+                    <p class="itemMiniHeader">Due Date</p>
+                    <p class="itemMiniDesc" id="itemMiniDue"></p>
+                </div>
+                <div class="itemInfoRow" id="itemPriority">
+                    <p class="itemMiniHeader">Priority</p>
+                    <p class="itemMiniDesc" id="itemMiniPrio"></p>
+                </div>
+            </div>
+
+            <form class="inputWrapper" autocomplete="off">
+
+                <div class="itemInfoRow">
+                    <label for="itemNameInput" class="itemMiniHeader">Item Name</label>
+                    <input name="itemNameInput" id="itemNameInput" type="text" class="itemMiniInput">
+                </div>
+
+                <div class="itemInfoRow">
+                    <label for="itemDescInput" class="itemMiniHeader">Item Desc</label>
+                    <input name="itemDescInput" id="itemDescInput" type="text" class="itemMiniInput">
+                </div>
+
+                <div class="itemInfoRow">
+                    <label for="itemDueInput" class="itemMiniHeader">Due Date</label>
+                    <input type="date" id="itemDueInput" name="'itemDueInput" class="itemMiniInput">
+                </div>
+
+                <div class="itemInfoRow">
+                    <label for="itemPriorityInput" class="itemMiniHeader">Priority</label>
+                    <input type="range" name="=itemPriorityInput" class="itemMiniInput" id="itemPriorityInput" min="0" max="100" value="50" step="50">
+                    <div class="rangeGuage"><span>Low</span><span>Medium</span><span>High</span></div>
+                </div>
+
+                <div class="itemInfoRow itemInfoRow-Buttons">
+                    <button class="forumButton" id="confirmForm" type="submit">Confirm</button>
+                    <button class="forumButton" id="cancelForm" type="button">Cancel</button>
+                </div>
+
+            </form>
+
+        <div class="col3UtilityWrapper">
+            <button class="col3Utility" id="editItem"><i class="fas fa-edit"></i></button>
+            <button class="col3Utility" id="deleteItem"><i class="fas fa-minus-circle"></i></button>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="editFolderWrapper">
+    <form class="editFolder" autocomplete="off">
+        <div class="topEdit">
+            <h3 class="miniHeader">Edit Folder</h3>
+            <label class="itemMiniHeader" for="fileName">Name</label>
+            <input type="text" name="fileName" id="fileName" class="itemMiniInput" max="15">
+        </div>
+        <div class="utilityEditFolder">
+            <button class="fileSave" type="submit">Save</button>
+            <button class="fileCancel" type="button">Cancel</button>
+        </div>
+    </form>
+</div>
+<script src="./script.js"></script>
+</body>
+</html>

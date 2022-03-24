@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.fa-list, .fa-star, .fa-trash-alt {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+#mainWrapper {
+    margin: auto;
+    margin-top: 2.5%;
+    display: grid;
+    width: 75%;
+    height: 30rem;
+    border-bottom: 1px solid #ebebeb;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 10% 1fr;
+    grid-template-areas: 
+    "d d d d"
+    "a b c c";
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.171);
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+}
+
+.mainWrapperDisable{
+    pointer-events: none;
+}
+
+#mainWrapper::after {
+    content: '';
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: -1000%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.377);
+}
+
+#mainWrapper li {
+    list-style: none;
+}
+
+#mainWarpper::after:active{
+    left:50%;
+}
+
+#header {
+    border-radius: 5px 5px 0px 0px;
+    font-size: 2rem;
+    background-color: #28a745;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    grid-area: d;
+    border-bottom: 3px solid #1c7733;
+}
+
+.miniHeader {
+    font: .8rem;
+    color: #808b91;
+    font-weight:300 ;
+    left: 1em;
+    margin: 0 0 1rem 0;
+    text-align: center;
+}
+
+#filesHeader {
+    text-align: center;
+    margin:0;
+    font-size: 1.75rem;
+}
+
+.addButton {
+    width: 90%;
+    height: 6.5%;
+    align-self: center;
+    justify-self: center;
+    background-color: white;
+    box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+    transition: box-shadow .2s,-webkit-box-shadow .2s;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 12px;
+}
+
+.addButton:hover {
+    cursor: pointer;
+    box-shadow: #28a745 0 0 0 2px, transparent 0 0 0 0;
+}
+
+.fa-plus {
+    color:#28a745;
+}
+
+#plusWrapper {
+    width: 85%;
+    height: 75%;
+}
+
+#plusWrapper:hover {
+    background-color:#fbfbfb;
+}
+
+
+.editFolderWrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.486);
+    top: -300%;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.editFolderWrapperActive{
+    top:0%;
+}
+
+.editFolder{
+    width: 20%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    margin: 0 auto;
+    margin-top: 5%;
+    border-radius: 3px;
+    position: absolute;
+    top:-300%;
+    left:40%;
+    transition: .5s ease-in-out;
+}
+
+.editFolderActive{
+    top:0%;
+}
+
+
+.topEdit {
+    border-bottom: 2px solid #ededed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 1rem;
+}
+
+.utilityEditFolder {
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.fileSave {
+    height: 1.9rem;
+    width: 3.1rem;
+    background-color: white;
+    border: 2px solid #28a74633;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #808b91;
+}
+
+.fileCancel {
+    height: 1.9rem;
+    width: 3.1rem;
+    background-color: white;
+    border: 2px solid rgba(255, 0, 0, 0.274);
+    border-radius: 5px;
+    cursor: pointer;
+    color: #808b91;
+}
+
+.fileSave:hover{
+    border: 2px solid #28a745;
+    color: black;
+}
+
+.fileCancel:hover{
+    border: 2px solid red;
+    color: black;
+}
